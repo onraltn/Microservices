@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/res/{id}", //buraya gelenleri nereye göndereyim ayarý
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44370
+        }
+      ],
+      "UpstreamPathTemplate": "/r/{id}", //dýþardan gelen 
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/contact/{id}", //buraya gelenleri nereye göndereyim ayarý
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44390
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{id}", //dýþardan gelen 
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
